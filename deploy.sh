@@ -5,8 +5,10 @@ sudo npm install -g pm2
 # stop any instance of our application running currently
 pm2 stop example_app
 # change directory into folder where application is downloaded
-cd ExampleNew/
+cd DevOpsSec-CA/
 # Install application dependencies
 npm install
+echo $PRIVATE_KEY > privatekey.pem
+echo $SERVER > server.crt
 # Start the application with the process name example_app using pm2
 pm2 start ./bin/www --name example_app
